@@ -1,0 +1,13 @@
+@import "variables";
+@import "pwaBanners";
+@import "chat";
+@font-face {
+    font-family: iransans;
+    src: url("IRANSans(FaNum).ttf");
+  }
+  * {
+    font-family: iransans;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
