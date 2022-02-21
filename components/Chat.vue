@@ -41,7 +41,7 @@
             <v-spacer></v-spacer>
           </div>
           <div>
-            <div id="chat-body" class="chat-body">
+            <div ref="messagesContainer" id="chat-body" class="chat-body">
               <div v-if="selectedChat.messages.length">
                 <div v-for="(msg, index) in selectedChat.messages" :key="index">
                   <v-row>
@@ -120,10 +120,16 @@ export default {
     },
     scrollToEnd() {
       // this function scroll the page to the bottom
-      var container = document.querySelector('#chat-body')
-      var scrollHeight = container.scrollHeight
-      console.log('scrolling...', scrollHeight)
-      container.scrollTop = scrollHeight
+      let container = document.querySelector('#chat-body');
+      let container2 = this.$refs.messagesContainer;
+      let scrollHeight;
+      if(container.scrollHeight > 0){
+        scrollHeight = container.scrollHeight;
+        container.scrollTop = scrollHeight;
+      }else if(container2.offsetHeight > 0){
+        scrollHeight = this.$refs.messagesContainer.offsetHeight;
+        container2.scrollTop = scrollHeight;
+      }
     },
   },
   watch: {
