@@ -2,26 +2,26 @@ const state = () => {
     return {
     selectedUser:{},
     chatList:[
-        {name:'ali',avatar:"https://cdn4.vectorstock.com/i/1000x1000/44/73/boy-avatar-in-round-web-button-isolated-on-white-vector-20694473.jpg",id:'1'},
-        {name:'hesam',avatar:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3RFDZM21teuCMFYx_AROjt-AzUwDBROFww&usqp=CAU",id:'2'},
-        {name:'sina',avatar:"https://cdn-icons-png.flaticon.com/512/147/147140.png",id:'3'},
+        {name:'ali' ,lastSeen:'16:00',avatar:"https://cdn4.vectorstock.com/i/1000x1000/44/73/boy-avatar-in-round-web-button-isolated-on-white-vector-20694473.jpg",id:'1'},
+        {name:'hesam' ,lastSeen:'online',avatar:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3RFDZM21teuCMFYx_AROjt-AzUwDBROFww&usqp=CAU",id:'2'},
+        {name:'sina' ,lastSeen:'09:03',avatar:"https://cdn-icons-png.flaticon.com/512/147/147140.png",id:'3'},
     ],
     chats:[
         {id:'1', messages:[
-            {self: true,message:'سلام',time:'15:34'},
-            {self: false,message:'سلام',time:'15:35'},
-            {self: true,message:'چطوری؟',time:'15:35'},
-            {self: false,message:'خوبم خداروشکر',time:'15:36'},
-            {self: true,message:'خداروشکر',time:'15:40'},
+            {self: true,read:true,message:'سلام',time:'15:34'},
+            {self: false,read:true,message:'سلام',time:'15:35'},
+            {self: true,read:true,message:'چطوری؟',time:'15:35'},
+            {self: false,read:true,message:'خوبم خداروشکر',time:'15:36'},
+            {self: true,read:true,message:'خداروشکر',time:'15:40'},
         ]},
         {id:'2', messages:[]},
         {id:'3', messages:[
-            {self: false,message:'سلام',time:'02:34'},
-            {self: false,message:'بیداری؟',time:'02:34'},
-            {self: true,message:'شرمنده خواب بودم',time:'07:34'},
-            {self: true,message:'چیزی شده؟',time:'07:35'},
-            {self: false,message:'نه، حل شد',time:'08:33'},
-            {self: true,message:'خب خداروشکر',time:'08:39'},
+            {self: false,read:true,message:'سلام',time:'02:34'},
+            {self: false,read:true,message:'بیداری؟',time:'02:34'},
+            {self: true,read:true,message:'شرمنده خواب بودم',time:'07:34'},
+            {self: true,read:true,message:'چیزی شده؟',time:'07:35'},
+            {self: false,read:true,message:'نه، حل شد',time:'08:33'},
+            {self: true,read:false,message:'خب خداروشکر',time:'08:39'},
         ]},
     ]
 }
@@ -48,6 +48,7 @@ const getters = {
         //add user too chat list
       state.chatList.unshift({
           name: name,
+          lastSeen:'online',
           avatar:'',
           id: random
       });
@@ -59,6 +60,7 @@ const getters = {
       //set selectedUser to show the new chat page
       state.selectedUser = {
         name: name,
+        lastSeen:'online',
         avatar:'',
         id: random
         };
@@ -82,6 +84,7 @@ const getters = {
         let chat = state.chats.filter(x=>x.id == state.selectedUser.id)[0];
         chat.messages.push({
             self: true,
+            read:false,
             message: msg,
             time: (hour < 10 ? '0'+hour : hour) + ":" + (minute < 10 ? '0'+minute : minute)
             
