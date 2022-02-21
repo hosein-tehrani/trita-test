@@ -9,6 +9,7 @@
               v-model="newUser"
               outlined
               dense
+              @keyup.enter="newUser && startChat()"
               label="Enter contanct username"
             ></v-text-field>
             <v-btn :disabled="!newUser" @click="startChat">start chat</v-btn>
@@ -155,14 +156,13 @@ export default {
   computed: {
     ...mapGetters(['chatList', 'selectedUser']),
     computedMessage() {
-      let messages = this.chatList
-      let filtered
+      let filtered = JSON.parse(JSON.stringify(this.chatList));
       if (this.filter) {
-        filtered = messages.filter((x) => x.name.includes(this.filter)) //check if there are any name that contains inputed value for search
-      } else {
-        filtered = messages
+        filtered.forEach(user => {
+          user.name = user.name.toLowerCase();
+        });
+        filtered = filtered.filter((x) => x.name.includes(this.filter.toLowerCase())) //check if there are any name that contains inputed value for search
       }
-
       return filtered
     },
   },

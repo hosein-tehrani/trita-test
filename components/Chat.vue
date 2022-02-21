@@ -72,7 +72,7 @@
                     v-model="newMessage"
                     outlined
                     placeholder="Write a message..."
-                    @keyup.enter="newMessage ? send() : ''"
+                    @keyup.enter="newMessage && send()"
                   >
                     <template v-slot:append>
                       <v-btn
