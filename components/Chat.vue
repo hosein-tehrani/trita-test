@@ -62,7 +62,7 @@
                             {{ msg.message }}
                           </span>
                         </div>
-                        <div class="text-right pt-1">
+                        <div class="text-right">
                           <span class="fs-xxsmall">{{ msg.time }}</span>
                           <span v-if="msg.self">
                             <v-icon small v-if="msg.read">mdi-check-all</v-icon>

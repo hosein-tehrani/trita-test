@@ -137,46 +137,15 @@
         }
       }
       .message {
-        min-width: 100px;
+        min-width: 200px;
         max-width: 500px;
-        padding: 10px;
+        padding: 5px;
   
         &.user1 {
           background-color: $primary;
           border-radius: 15px 0px 15px 15px;
           i {
             color: #fff;
-          }
-          audio::-webkit-media-controls-panel {
-            background-color: $primary !important;
-            border: none !important;
-          }
-          audio::-webkit-media-controls-mute-button,
-          audio::-webkit-media-controls-play-button,
-          audio::-webkit-media-controls-timeline-container,
-          audio::-webkit-media-controls-current-time-display,
-          audio::-webkit-media-controls-time-remaining-display,
-          audio::-webkit-media-controls-timeline,
-          audio::-webkit-media-controls-volume-slider-container,
-          audio::-webkit-media-controls-volume-slider,
-          audio::-webkit-media-controls-seek-back-button,
-          audio::-webkit-media-controls-seek-forward-button,
-          audio::-webkit-media-controls-fullscreen-button,
-          audio::-webkit-media-controls-rewind-button,
-          audio::-webkit-media-controls-return-to-realtime-button,
-          audio::-webkit-media-controls-toggle-closed-captions-button {
-            filter: sepia(100%) saturate(400%) grayscale(0) contrast(200%)
-              hue-rotate(209deg) invert(100%);
-          }
-          .show-reply {
-            padding: 8px;
-            border-radius: 7px;
-            background-color: rgba(255, 255, 255, 0.23);
-            // border: 1px solid $primary;
-            text-align: left;
-            margin-bottom: 10px;
-            border-left: 7px solid #d0e0f5;
-            font-size: 0.95rem;
           }
         }
         &.user2 {
@@ -186,43 +155,6 @@
           path {
             stroke: $primary;
           }
-          audio::-webkit-media-controls-panel {
-            background-color: $lightBlue2 !important;
-            border: none !important;
-          }
-  
-          .show-reply {
-            padding: 8px;
-            border-radius: 7px;
-            background-color: rgba(87, 131, 187, 0.15);
-            // border: 1px solid $primary;
-            text-align: left;
-            margin-bottom: 10px;
-            border-left: 7px solid $primary;
-            font-size: 0.95rem;
-          }
-        }
-      }
-      .add-btn {
-        border-radius: 8px !important;
-        font-size: 0.8rem !important;
-        font-weight: 500 !important;
-      }
-      .reply-box {
-        margin-top: 1px;
-        border: 1px solid $primary;
-        border-bottom: none;
-        border-radius: 4px 4px 0 0;
-        padding: 15px;
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #d9e8ff;
-        color: #636363;
-        display: none;
-        &.active {
-          display: block;
         }
       }
     }
