@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark :style="{background: $vuetify.theme.themes[darkMode ? 'dark' : 'light'].background}">
     <v-app-bar :clipped-left="clipped" fixed app>
       <img style="height: 45px" src="tritapp-logo.svg"/>
       <v-spacer></v-spacer>

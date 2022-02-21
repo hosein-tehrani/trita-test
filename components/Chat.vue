@@ -1,9 +1,9 @@
 <template>
   <div class="messages">
-    <v-card elevation="5" class="main chat-box">
+    <v-card elevation="1" class="main chat-box">
       <v-container>
         <div class="first-box  fs-small grey--text" v-if="!selectedUser.id">
-          <div>Choose a chat...</div>
+          <div class="border">Select a chat...</div>
         </div>
         <div
           @keyup.escape="selectUser({})"

@@ -2,7 +2,7 @@ const state = () => {
     return {
     selectedUser:{},
     chatList:[
-        {name:'ali' ,lastSeen:'16:00',avatar:"https://cdn4.vectorstock.com/i/1000x1000/44/73/boy-avatar-in-round-web-button-isolated-on-white-vector-20694473.jpg",id:'1'},
+        {name:'ali' ,lastSeen:'16:00',avatar:"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile.png",id:'1'},
         {name:'hesam' ,lastSeen:'online',avatar:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3RFDZM21teuCMFYx_AROjt-AzUwDBROFww&usqp=CAU",id:'2'},
         {name:'sina' ,lastSeen:'09:03',avatar:"https://cdn-icons-png.flaticon.com/512/147/147140.png",id:'3'},
     ],

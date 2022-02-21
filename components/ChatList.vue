@@ -31,7 +31,7 @@
         </v-container>
       </v-card>
     </v-dialog>
-    <v-card elevation="5" class="main list-header">
+    <v-card elevation="1" class="main list-header">
       <v-container>
         <v-row>
           <v-col class="pt-4">
@@ -45,7 +45,7 @@
         </v-row>
       </v-container>
     </v-card>
-    <v-card elevation="5" class="main mt-6">
+    <v-card elevation="1" class="main mt-6">
       <v-container>
         <div class="messages-search">
           <v-text-field

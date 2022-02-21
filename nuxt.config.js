@@ -69,11 +69,12 @@ export default {
       dark: true,
       themes: {
         light: {
-          backgroundColor: "F9F9F9",
+          backgroundColor: "#F9F9F9",
           fontColor: "#2C365D",
           primary: "#0090B8",
           commonText: "#656A81",
           greyBg: "#F2F2F5",
+          background: "#f4f5fa"
         },
         dark: {
           backgroundColor: "#232527",
@@ -81,6 +82,8 @@ export default {
           primary: "#0090B8",
           commonText: "#fff",
           greyBg: "#3a3a3b",
+          background:"#121212"
+
         },
       },
     },
