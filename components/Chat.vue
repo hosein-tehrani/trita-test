@@ -52,13 +52,13 @@
                         :class="
                           msg.self
                             ? 'user1 white--text'
-                            : 'user2 commonText--text'
+                            : 'user2'
                         "
                         elevation="3"
                         max-width="350"
                       >
-                        <div class="d-flex flex-row justify-space-between px-1">
-                          <span class="text-right fs-xsmall">
+                        <div class="text-right justify-space-between px-1">
+                          <span class="fs-xsmall">
                             {{ msg.message }}
                           </span>
                         </div>
