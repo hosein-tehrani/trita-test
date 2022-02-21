@@ -112,13 +112,9 @@
       max-height: calc(100vh - 260px);
       height: calc(100vh - 260px);
       min-height: calc(100% - 75px);
-      // max-height: 150px;
-      // height: 150px;
-      // min-height: 150px;
       padding: 20px 0 0;
-      overflow: scroll;
-      // overflow-x: hidden;
-      // position: relative !important;
+      overflow-y: scroll;
+      overflow-x: hidden;
       scroll-behavior: smooth;
   
       &::-webkit-scrollbar {

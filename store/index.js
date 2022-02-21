@@ -30,6 +30,9 @@ const getters = {
     selectedUser: state => {
       return state.selectedUser;
     },
+    userId: state => {
+      return state.selectedUser.id;
+    },
     chatList: state => {
       return state.chatList;
     },

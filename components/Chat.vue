@@ -105,19 +105,28 @@ export default {
             this.sendMessage(this.newMessage);
             this.newMessage = '';
             setTimeout(() => {
-            this.scrollToEnd();
-            }, 1000);
+              this.scrollToEnd();
+            }, 400);
         },
         scrollToEnd() {
             // this function scroll the page to the bottom
             var container = document.querySelector("#chat-body");
             var scrollHeight = container.scrollHeight;
-            console.log(container.scrollHeight)
+            console.log("scrolling...",scrollHeight)
             container.scrollTop = scrollHeight;
         },
     },
+    watch:{
+      userId(val){
+        if(val){
+          setTimeout(() => {
+            this.scrollToEnd();
+          }, 400);
+        }
+      }
+    },
     computed:{
-        ...mapGetters(["selectedChat","selectedUser"])
+        ...mapGetters(["selectedChat","selectedUser","userId"])
     }
 }
 </script>
